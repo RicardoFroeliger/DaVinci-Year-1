@@ -1,0 +1,11 @@
+Water:
+	Towards		> Break 	> Attack		> GAME OVER
+							> Surrender		> GAME WON
+							> Aang			> [Minigame]	> WIN = GAME WON
+															> LOSE = GAME OVER
+				> Run		> Attack    	> GAME OVER
+		    	    		> Surrender		> GAME OVER
+
+
+	Fishing		> Attack    > GAME OVER
+				> Surrender > GAME OVER	  
