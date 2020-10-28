@@ -1,0 +1,11 @@
+https://www.kapwing.com/studio/editor
+https://online-video-cutter.com/
+Filmora program
+https://www.photoenlarger.com/
+
+
+
+1. Use kapwing to create bottom padding. 
+2. Use Filmora to edit
+3. Remove both watermarks and bottom padding using online video cutter.
+4. [optional] Enlarge images for extra reslution.
