@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1W6O1 - Robotarm ~ 4</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            robotArm.loadLevel("exercise 4");
+            robotArm.speed = 1000;
+
+
+
+            robotArm.grab();
+            for (i = 1; i <= 2; i++) {
+                for(j = 1; j <= 2; j++) robotArm.moveRight();
+                robotArm.drop();
+                for(j = 1; j <= 2; j++) robotArm.moveLeft();
+                robotArm.grab();
+            };
+            robotArm.moveRight();
+            robotArm.drop();
+            robotArm.moveRight();
+            for(i = 1; i <= 2; i++) {
+                robotArm.grab();
+                robotArm.moveLeft();
+                robotArm.drop();
+                robotArm.moveRight();
+            };
+            for(i = 1; i <= 2; i++) robotArm.moveLeft(); // Reset hook position
+
+
+            
+            robotArm.run();
+        </script>
+    </body>
+</html>

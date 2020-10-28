@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1W6O1 - Robotarm ~ 1</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            robotArm.loadLevel("exercise 1");
+            robotArm.speed = 500;
+            
+            
+
+            robotArm.moveRight();
+            robotArm.grab();
+            robotArm.moveLeft();
+            robotArm.drop();
+            
+            
+
+            robotArm.run();
+        </script>
+    </body>
+</html>

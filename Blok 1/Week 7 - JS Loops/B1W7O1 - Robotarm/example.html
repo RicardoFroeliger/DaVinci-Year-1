@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            // Loadig robotarm library
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            // Loading level
+            robotArm.loadLevel("exercise 1");
+            
+            // Enter your instructions here
+            robotArm.moveRight();
+            robotArm.moveRight();
+            
+            // Run those instructions
+            robotArm.run();
+            
+            // https://github.com/davinci-ao17/robotarm
+        </script>
+    </body>
+</html>
+
