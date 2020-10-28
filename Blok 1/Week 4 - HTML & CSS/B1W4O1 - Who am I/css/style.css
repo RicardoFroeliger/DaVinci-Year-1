@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(to right, #ccffcc, #99ff99);
+    margin: 0;
+}
+a, p, h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+    line-height: 24px;
+    margin: 8px 20px 20px 48px;
+}
+h1 { 
+    font-size: 25px; 
+    margin-bottom: 16px;
+    margin-top: 10%;
+}
+img {
+    float: right;
+    margin: 40px 40px 0px 0px;
+    transform: translateY(10%);
+    
+    height: 400px;
+    width: 300px;
+    border-radius: 10%;
+}
+/* Navigator */
+nav {
+    background-color: #333333;
+    overflow: hidden;
+}
+nav a, nav p {
+    float: left;
+    padding: 16px;
+    margin: 0;
+
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+nav p { float: right; }
+nav a:hover {
+    background-color: #666666;
+    color: white;
+}
+nav a.active {
+    background-color: #80ff80;
+    color: white;
+}
