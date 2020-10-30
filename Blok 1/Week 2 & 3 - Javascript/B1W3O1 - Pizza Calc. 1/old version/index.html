@@ -1,0 +1,60 @@
+* Ricardo Froeliger<br>
+* Davinci College Software Developer<br> 
+* Opdracht: Pizza Calculator
+<html>
+    <head>
+        <!-- Loading Sources -->
+        <title>Blok 1 Week 3 Opdracht 1</title>
+        <script src ='./index.js'></script> 
+        <link rel ='stylesheet' href ='index.css'>
+    </head>
+    <body class ='bg'>
+        <div class ='main'>
+            <b style ='font-size: 21;'>Please choose the number of pizza's you want per size.</b>
+            <table>
+                <tr> <!-- Creating First Layer Of Buttons -->
+                    <td><input class ='button' type ='button' value ='+ Small' onclick ='quantity("small", "add")'></td>
+                    <td><input class ='button' type ='button' value ='+ Medium' onclick ='quantity("medium", "add")'></td>
+                    <td><input class ='button' type ='button' value ='+ Large' onclick ='quantity("large", "add")'></td>
+                    <td><u style ='font-size:2.0em; margin:22.5'>Total<u></td>
+                </tr>
+                <tr> <!-- Creating The Current Pizza Counter -->
+                    <td><b class ='counter' id ='smallPizza'>0</b></td>
+                    <td><b class ='counter' id ='mediumPizza'>0</b></td>
+                    <td><b class ='counter' id ='largePizza'>0</b></td>
+                    <td><b class ='counter' id ='totalPizza'>0</b></td>
+                </tr>
+                <tr> <!-- Creating Second Layer Of Buttons -->
+                    <td><input class ='button' type ='button' value ='- Small' onclick ='quantity("small", "remove")'></td>
+                    <td><input class ='button' type ='button' value ='- Medium' onclick ='quantity("medium", "remove")'></td>
+                    <td><input class ='button' type ='button' value ='- Large' onclick ='quantity("large", "remove")'></td>
+                    <td><u style ='font-size:2.0em; margin:22.5'>Price<u></td>
+                </tr>
+                <tr> <!-- Creating Price Next To Buttons -->
+                    <td><b class ='price'>4.99</b></td>
+                    <td><b class ='price'>7.49€</b></td>
+                    <td><b class ='price'>9.99€</b></td>
+                    <td><b style ='font-size:1.5em; margin:22.5' id ='totalPrice'>0.00€</b></td>
+                </tr>
+            </table>
+        </div>            
+        <table>
+            <tr>
+                <td><b class ='receipt' id ='receiptRow1'></b></td>    
+                <td><b class ='receipt' style ='left: 25;' id ='receiptRow4'></b></td>
+            </tr>
+            <tr>
+                <td><b class ='receipt' id ='receiptRow2'></b></td>
+                <td><b class ='receipt' style ='left: 25;' id ='receiptRow5'></b></td>
+            </tr>
+            <tr>    
+                <td><b class ='receipt' id ='receiptRow3'></b></td>
+                <td><b class ='receipt' style ='left: 25;' id ='receiptRow6'></b></td>
+            </tr>       
+            <tr>
+                <td><b class ='receipt' style ='font-size: 30;' id ='receiptRow7'></b></td>
+                <td><b class ='receipt' style ='left: 25; font-size: 30;' id ='receiptRow8'></b></td>
+            </tr>
+        </table>
+    </body>
+</html>
