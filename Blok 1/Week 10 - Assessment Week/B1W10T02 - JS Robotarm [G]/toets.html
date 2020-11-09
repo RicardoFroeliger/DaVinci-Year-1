@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            robotArm.loadLevel("exam 1");
+            robotArm.speed = 1000;
+            
+
+
+            let indexes = [ [4, 3], [3, 3], [3, 4] ];
+            let shiftAll = direction => {
+                for(i = 0; i < 3; i++) {
+                    for(let j = 0; j < indexes[i][0]; j++) {
+                        direction === 'left' ? robotArm.moveRight() : robotArm.moveLeft();
+                    };
+                    robotArm.grab();
+                    for(let j = 0; j < indexes[i][1]; j++) {
+                        direction === 'left' ? robotArm.moveLeft() : robotArm.moveRight();
+                    };
+                    robotArm.drop();
+                };
+
+                for(i = 0; i < 2; i ++) {
+                    direction === 'left' ? robotArm.moveRight() : robotArm.moveLeft();
+                    robotArm.grab();
+                    direction === 'left' ? robotArm.moveLeft() : robotArm.moveRight();
+                    robotArm.drop();
+                };
+            };
+
+            shiftAll('left');
+            for(i = 0; i < 9; i++) robotArm.moveRight();
+            shiftAll('right');
+
+
+
+            robotArm.run();
+        </script>
+    </body>
+</html>

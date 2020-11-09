@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+        
+            robotArm.loadLevel("exam 2");
+            robotArm.speed = 1000;
+            
+
+
+            /* --- This code is not editable --- */
+                    moveArm("right", 3);
+                    moveBlock("left", 3);
+                    moveBlock("right", 6);
+                    moveBlock("right", 2);
+                    moveBlock("right", 6);
+                    moveBlock("left", 1);
+                    moveBlock("left", 3);
+            /* --- This code is not editable --- */
+
+            function moveArm(direction, quantity) {
+                for(let i = 0; i < quantity; i++) {
+                    direction === 'left' ? robotArm.moveLeft() : robotArm.moveRight();
+                };
+            };
+
+            function moveBlock(direction, quantity) {
+                robotArm.grab();
+                moveArm(direction, quantity);
+                robotArm.drop();
+                moveArm(direction === 'left' ? 'right' : 'left', quantity);
+            };
+
+
+
+            robotArm.run();
+        </script>
+    </body>
+</html>
