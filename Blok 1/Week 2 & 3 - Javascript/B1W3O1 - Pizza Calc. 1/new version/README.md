@@ -1,3 +1,5 @@
+# B1W3L3 - Operators
+## Created by Ricardo Froeliger
 Create the JavaScript application "Pizza Calculator". 
 The functionalities that must be in the application are:
 

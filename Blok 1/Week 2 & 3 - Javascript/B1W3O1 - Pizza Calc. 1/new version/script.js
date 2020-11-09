@@ -18,7 +18,7 @@ String.prototype.capitalize = function() { return this.charAt(0).toUpperCase() +
 // Checks if the number is valid, and pushes the order into an array.
 // If all sizes has been asked, the receipt will be calculated and printed on the screen.
 let validate = size => { 
-    const num = prompt(`Enter the number of ${size} pizzas you want to order.`);
+    const num = prompt(`Enter the number of ${size} (${PRICES[size]}€) pizzas you want to order.`);
     if(!num || !num.match(/^\d+$/)) {
         alert('Invalid number! Refresh the page and try again.');
         document.getElementById('output').innerHTML = 'Invalid number! Refresh the page and try again.';
