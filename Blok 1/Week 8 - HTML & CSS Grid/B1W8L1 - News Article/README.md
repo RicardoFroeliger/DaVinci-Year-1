@@ -4,4 +4,4 @@
 Copy the example below as accurately as possible.
 Pay close attention to how many rows and columns this example consists of.
 
-![Design](images/design.png)
+![Design](images/design.jpg)
