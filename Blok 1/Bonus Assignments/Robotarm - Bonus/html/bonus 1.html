@@ -33,20 +33,18 @@
             };
 
             /* Color Sorting Algorithm */
-            while(totalStops === 0 || totalStops === 1) {
+            while(totalStops < 2) {
                 robotArm.grab();
                 if(robotArm.scan() === null) {
                     totalStops++;
                     totalStops === 1 ? moveArm('right', 1) : moveArm('left', 1);
                 } else if(!colors.includes(robotArm.scan())) colors.push(robotArm.scan());      
 
-                if(totalStops === 0 || totalStops === 1) {
-                    for(let i = 0; i < 4; i++) {
-                        if(robotArm.scan() === colors[i]) {
-                            moveArm('right', (9 - i - totalStops));
-                            robotArm.drop();
-                            moveArm('left', (9 - i -totalStops));
-                        };
+                for(let i = 0; i < 4; i++) {
+                    if(totalStops < 2 && robotArm.scan() === colors[i]) {
+                        moveArm('right', (9 - i - totalStops));
+                        robotArm.drop();
+                        moveArm('left', (9 - i - totalStops));
                     };
                 };
             };
