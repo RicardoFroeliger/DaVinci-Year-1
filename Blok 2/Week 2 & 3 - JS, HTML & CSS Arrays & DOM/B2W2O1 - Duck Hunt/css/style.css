@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    background: lightgrey;
+    font-family: Impact, 'Charcoal', sans-serif;  
+}
+img, div, h1, h2, h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 30px;
+    line-height: 38px; 
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: none;
+}
+
+img#stage {
+    width: 1000px;
+    height: 600px;
+    border: 5px solid grey;
+    z-index: -1;
+}
+img#duck {
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%) scaleX(1);  
+} 
+img#crosshair {
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
+div#score {
+    height: 75px;
+    width: 150px;
+    border-radius: 10%;
+    border: 3px solid #111111;
+    background: linear-gradient(to right, #222222, #333333);
+    top: 97%;
+    transform: translate(-50%, -97%);  
+}
+div.scoreText {
+    height: 75px;
+    width: 75px;
+    left: calc(50% - 25px);
+}
+div#scoreHitMiss {
+    height: 75px;
+    width: 50px;
+    left: calc(50% + 40px);
+    text-align: right;
+}
+
+div#gameover {
+    height: 250px;
+    width: 400px;
+    border-radius: 25%;
+    border: 3px solid #111111;
+    background: linear-gradient(to right, #222222, #333333);
+    visibility: hidden;
+}
+h1#gameoverText {
+    top: calc(50% - 65px);
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+}
+h3#gameoverReason {
+    top: 50%;
+    width: 350px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+h2#gameoverScore {
+    top: calc(50% + 65px);
+}
