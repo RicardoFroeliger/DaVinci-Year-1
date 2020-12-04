@@ -13,64 +13,64 @@ setTimeout(() => {
     let moveDuck = async (directions, hideDuck) => {
         let randomDir = directions[Math.floor(Math.random () * directions.length)];
         switch(randomDir) {
-            case 'N': {
+            case 'N': 
                 if(position[1] < 225) {
                     position[1] += 75;
                     duck.style.top = `calc(50% - ${position[1]}px)`;
                 };
-            }; break;
-            case 'NE': {
+            break;
+            case 'NE': 
                 if(position[1] < 225 && position[0] < 450) {
                     position[1] += 75; position[0] += 75;
                     duck.style.top = `calc(50% - ${position[1]}px)`;
                     duck.style.left = `calc(50% + ${position[0]}px)`;
                     duck.style.transform = 'translate(-50%, -50%) scaleX(1)';
                 } else if(hideDuck === true) duck.style.visibility = 'hidden';
-            }; break;
-            case 'E': {
+            break;
+            case 'E':
                 if(position[0] < 450) {
                     position[0] += 75;
                     duck.style.left = `calc(50% + ${position[0]}px)`;
                     duck.style.transform = 'translate(-50%, -50%) scaleX(1)';
                 } else if(hideDuck === true) duck.style.visibility = 'hidden';
-            }; break;
-            case 'SE': {
+            break;
+            case 'SE':
                 if(position[1] > -75 && position[0] < 450) {
                     position[1] -= 75; position[0] += 75;
                     duck.style.top = `calc(50% - ${position[1]}px)`;
                     duck.style.left = `calc(50% + ${position[0]}px)`;
                     duck.style.transform = 'translate(-50%, -50%) scaleX(1)';
                 };
-            }; break;
-            case 'S': {
+            break;
+            case 'S':
                 if(position[1] > -75) {
                     position[1] -= 75;
                     duck.style.top = `calc(50% - ${position[1]}px)`;
                 } else if(hideDuck === true) duck.style.visibility = 'hidden';
-            }; break;
-            case 'SW': {
+            break;
+            case 'SW':
                 if(position[1] > -75 && position[0] > -450) {
                     position[1] -= 75; position[0] -= 75;
-                    duck.style.top = `calc(50% -     ${position[1]}px)`;
+                    duck.style.top = `calc(50% - ${position[1]}px)`;
                     duck.style.left = `calc(50% + ${position[0]}px)`;
                     duck.style.transform = 'translate(-50%, -50%) scaleX(-1)';
                 };
-            }; break;
-            case 'W': {
+            break;
+            case 'W':
                 if(position[0] > -450) {
                     position[0] -= 75;
                     duck.style.left = `calc(50% + ${position[0]}px)`;
                     duck.style.transform = `translate(-50%, -50%) scaleX(-1)`;
                 };
-            }; break;
-            case 'NW': {
+            break;
+            case 'NW': 
                 if(position[1] < 225 && position[0] > -450) {
                     position[1] += 75; position[0] -= 75;
                     duck.style.top = `calc(50% - ${position[1]}px)`;
                     duck.style.left = `calc(50% + ${position[0]}px)`;
                     duck.style.transform = 'translate(-50%, -50%) scaleX(-1)';
                 };
-            }; break;
+            break;
         };
     };
 
@@ -94,9 +94,9 @@ setTimeout(() => {
             loopAfterClick = false;
             if(lastShotHit === true) duck.src = 'images/explosion.gif';
             else if(lastShotHit === false) setInterval(() => moveDuck(['S'], true), 200);
-            setTimeout(() => displayGOScreen('WON', 'shot the duck over'), 2000);
+            setTimeout(() => displayGOScreen('WON', `shot the duck ${scorePoints[0] > 10 ? 'over': ''}`), 2000);
         } 
-        else if(loopAfterClick === true) {
+        else if(loopAfterClick === true) { // LOST
             loopAfterClick = false;
             setInterval(() => moveDuck(['NE', 'E'], true), 200); // The duck flies away bacially 
             setTimeout(() => displayGOScreen('LOST', 'did not shoot the duck atleast'), 2000);
@@ -118,10 +118,15 @@ setTimeout(() => {
     document.addEventListener('click', () => {
         let shotsFired = scorePoints[0] + scorePoints[1];
         if(shotsFired >= 20) { clearInterval(move); gameover(); };
-        if(shotsFired <= 20) {
-            score.innerHTML = `${scorePoints.join('<br>')}`;
-            console.log(lastShotHit)
-        }
+        if(shotsFired <= 20) score.innerHTML = `${scorePoints.join('<br>')}`;
+
+        /* Crosshair Increases Quickly When Shot */
+        crosshair.style.height = '75px';
+        crosshair.style.width = '75px';
+        setTimeout(() => {
+            crosshair.style.height = '50px';
+            crosshair.style.width = '50px';
+        }, 50);
     });
 
     /* Crosshair Movement */
