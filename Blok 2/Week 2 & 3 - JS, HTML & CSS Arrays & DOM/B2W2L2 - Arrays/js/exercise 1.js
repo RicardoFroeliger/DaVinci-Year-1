@@ -1,18 +1,11 @@
 setTimeout(() => {
-    let allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    allDaysRvsd = ['Sunday', 'Saturday', 'Friday', 'Thursday', 'Wednesday', 'Tuesday', 'Monday'];
+    let allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    let h3 = num => document.getElementById(`h3_${num}`);
 
-    let sortDays = num => {
-        let h3 = document.getElementById(`h3_${num}`);
-        switch(num) {
-            case 1: h3.innerHTML = allDays.join(', '); break;
-            case 2: h3.innerHTML = allDays.join(', ').split(`, ${allDays[5]}`)[0]; break;
-            case 3: h3.innerHTML = allDays.join(', ').split(`${allDays[4]},`)[1]; break;
-            case 4: h3.innerHTML = allDaysRvsd.join(', '); break;
-            case 5: h3.innerHTML = allDaysRvsd.join(', ').split(`${allDays[5]},`)[1]; break;
-            case 6: h3.innerHTML = allDaysRvsd.join(', ').split(`, ${allDays[4]}`)[0]; break;
-        };
-    };
-
-    for(let i = 1; i <= 6; i++) sortDays(i);
+    h3(1).innerHTML = allDays.join(', ');
+    for(let i = 0; i < 5; i++) h3(2).innerHTML += (i != 4 ? `${allDays[i]}, ` : allDays[i]);
+    for(let i = 5; i < 7; i++) h3(3).innerHTML += (i != 6 ? `${allDays[i]}, ` : allDays[i]);
+    h3(4).innerHTML = allDays.reverse().join(', ');
+    for(let i = 6; i > 0; i--) h3(5).innerHTML += (i != 1 ? `${allDays[i]}, ` : allDays[i]);
+    for(let i = 1; i >= 0; i--) h3(6).innerHTML += (i != 0 ? `${allDays[i]}, ` : allDays[i]);
 }, 100);
