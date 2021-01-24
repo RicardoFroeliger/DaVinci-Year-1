@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    height: 20vmin;
+    width: 70vmin;
+    background: white;
+    border: 0.5vmin solid #888888;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    height: 8vmin;
+    width: 20vmin;
+    margin: 6vmin 0px 6vmin calc(10vmin / 6);
+    border: 0.5vmin solid transparent;
+    outline: none;
+    font-size: 3.5vmin;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+button.first { 
+    margin-left: calc(5vmin - (10vmin / 6));
+}
+button:hover {
+    border: 0.5vmin solid #b3b3b3
+}
