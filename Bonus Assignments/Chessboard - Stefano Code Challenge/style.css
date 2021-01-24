@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+}
+body {
+    background: grey;
+}
+
+div.board {
+    height: 600px;
+    width: 600px;
+    margin: 0px auto;
+    border: 5px solid black;
+}
+div.tile {
+    height: 75px;
+    width: 75px;
+    display: inline-block;
+}
+div.kingTile {
+    background: url('king.png') no-repeat center center / cover;
+}
