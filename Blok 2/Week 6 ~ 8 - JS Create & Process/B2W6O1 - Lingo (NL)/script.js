@@ -23,7 +23,6 @@ window.onload = () => {
             startGame();
         };
     };
-    // startGame();
 };
 
 const startGame = () => {
