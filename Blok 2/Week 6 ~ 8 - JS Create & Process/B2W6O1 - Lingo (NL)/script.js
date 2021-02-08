@@ -47,10 +47,8 @@ const startGame = () => {
     
     /* ------------------ Key Listener ------------------ */
     document.addEventListener('keyup', e => {
-        let key = e.key.toUpperCase();
-        let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        let currentBox = letterBoxes[editIndex];
-        let lastBox = letterBoxes[editIndex - 1];
+        let key = e.key.toUpperCase(), alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let currentBox = letterBoxes[editIndex], lastBox = letterBoxes[editIndex - 1];
 
         if(alphabet.includes(key) && editIndex < letters * (tries + 1) && gameEnded == false) {
             currentBox.replaceChild(document.createTextNode(key), currentBox.childNodes[0]);
