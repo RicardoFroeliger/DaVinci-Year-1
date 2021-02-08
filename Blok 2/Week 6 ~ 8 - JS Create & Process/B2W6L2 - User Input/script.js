@@ -2,7 +2,6 @@ setTimeout(() => {
     let names = document.getElementById('names');
     let namesReversed = document.getElementById('namesReversed');
     let nameArr = [];
-    let continueLoop = true;
 
     let quantity = null;
     const askMaximum = () => {
@@ -18,15 +17,14 @@ setTimeout(() => {
             } else quantity = qty;            
         } else {
             names.innerHTML = 'You canceled.';
-            continueLoop = false;
+            quantity = 0;
         };
     };
     askMaximum();
-    
-    let askedNames = 0;
-    const askName = () => {
-        setTimeout(() => {
-            let name = prompt(`Enter name ${askedNames + 1}:`);
+
+    for(let i = 0; i < quantity; i++) {
+        const askName = () => {
+            let name = prompt(`Enter name ${i + 1}:`);
             if(name) {
                 name = name.trim();
                 if(name.match(/^\d+$/)) {
@@ -35,18 +33,16 @@ setTimeout(() => {
                 } else {
                     nameArr.push(name);
                     names.innerHTML = `The names entered in the array are:<br>${nameArr.join(', ')}`;
-                    namesReversed.innerHTML = `The names entered in the array in reverse order are:<br>${nameArr.reverse().join(', ')}`;
-                    if(askedNames < quantity - 1) {
-                        askedNames++;
-                        if(continueLoop == true) askName();
-                    };
+                    nameArr = nameArr.reverse();
+                    namesReversed.innerHTML = `The names entered in the array in reverse order are:<br>${nameArr.join(', ')}`;
+                    nameArr = nameArr.reverse();
                 };
             } else { 
                 names.innerHTML = 'You canceled.'; 
                 namesReversed.innerHTML = '';
-                continueLoop = false;
+                quantity = 0;
             };
-        }, 100);    
-    };  
-    if(continueLoop == true) askName();      
+        };
+        setTimeout(() => askName(), 10);
+    };    
 }, 500);

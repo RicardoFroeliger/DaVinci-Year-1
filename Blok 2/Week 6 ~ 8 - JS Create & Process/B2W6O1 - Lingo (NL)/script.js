@@ -8,7 +8,6 @@ const createElement = (element, Class, target, text) => {
 };
 
 
-
 window.onload = () => {
     let mainDiv = createElement('div', 'letterSelector', document.body);
     createElement('h1', 'selectorH1', mainDiv, 'Selecteer het aantal letters waarmee u wilt spelen');
@@ -25,9 +24,11 @@ window.onload = () => {
     };
 };
 
+
 const startGame = () => {
     let randomWord = words[letters][Math.floor(Math.random() * words[letters].length)].toUpperCase();
-    let guesses = { editIndex: 1, letters: [randomWord[0]], goodLetters: [] };
+    let guessedLetters = [randomWord[0]], goodLetters = [randomWord[0]];
+    let editIndex = 1, tries = 0, gameEnded = false;
     
 
     /* -------------- Create Body of Board -------------- */
@@ -46,44 +47,46 @@ const startGame = () => {
     
     /* ------------------ Key Listener ------------------ */
     document.addEventListener('keyup', e => {
-        let key = e.key.toUpperCase(), alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        let currentBox = letterBoxes[guesses.editIndex], lastBox = letterBoxes[guesses.editIndex - 1];
+        let key = e.key.toUpperCase();
+        let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let currentBox = letterBoxes[editIndex];
+        let lastBox = letterBoxes[editIndex - 1];
 
-        if(alphabet.includes(key) && currentBox && currentBox.childNodes[0]) {
+        if(alphabet.includes(key) && editIndex < letters * (tries + 1) && gameEnded == false) {
             currentBox.replaceChild(document.createTextNode(key), currentBox.childNodes[0]);
-            guesses.letters.push(e.key.toUpperCase());
-            guesses.editIndex++;
-            
-        } else if(key == 'BACKSPACE' && lastBox && lastBox.childNodes[0] && lastBox.id !== 'rowUsed') {
+            guessedLetters.push(e.key.toUpperCase());
+            editIndex++;
+        } else if(key == 'BACKSPACE' && editIndex > letters * tries && gameEnded == false) {
             lastBox.replaceChild(document.createTextNode('.'), lastBox.childNodes[0]);
-            guesses.letters.pop();
-            guesses.editIndex--;
-        } else if(key == 'ENTER' && guesses.letters.length == letters) {
+            guessedLetters.pop();
+            editIndex--;
+        } else if(key == 'ENTER' && editIndex == letters * (tries + 1) && tries < 5 && gameEnded == false) {
             letterChecker();
             createNewRow();
-            console.log(guesses)
+            tries++;
         };
 
         for(const B of letterBoxes) B.style.opacity = '100%';
-        if(letterBoxes[guesses.editIndex].childNodes[0]) letterBoxes[guesses.editIndex].style.opacity = '50%';   
+        if(letterBoxes[editIndex] && letterBoxes[editIndex].childNodes[0]) letterBoxes[editIndex].style.opacity = '50%';   
     });
     /* ------------------ Key Listener ------------------ */
     
 
     /* ----------------- Letter Checker ----------------- */
     const letterChecker = () => {
-        let wordChars = randomWord.split(''), inputChars = guesses.letters;
-        for(const C in wordChars) {
-            let pos = inputChars.indexOf(wordChars[C]);
-            if(wordChars[C] === inputChars[C]) {
-                letterBoxes[C].style.background = '#df2936';
-                letterBoxes[C].style.borderRadius = '10%';
-                wordChars[C] += '✅';
-                inputChars[C] += '✔️';
-            } else if(pos !== -1) {
-                letterBoxes[pos].style.background = '#d4b648';
-                letterBoxes[pos].style.borderRadius = '50%';
-                wordChars[pos] += '🟡';
+        let wordChars = randomWord.split('');
+        for(let C in wordChars) {
+            C = parseInt(C);
+            let pos = guessedLetters.indexOf(wordChars[C]);
+            if(wordChars[C] == guessedLetters[C]) {
+                letterBoxes[C + (tries * letters)].style.background = '#df2936';
+                letterBoxes[C + (tries * letters)].style.borderRadius = '10%';
+                guessedLetters[C] += '✅';
+                wordChars[C] += '✔️';
+            } else if(pos != -1) {
+                letterBoxes[pos + (tries * letters)].style.background = '#d4b648';
+                letterBoxes[pos + (tries * letters)].style.borderRadius = '50%';
+                guessedLetters[pos] += '🟡';
             };
         };
     };
@@ -92,11 +95,43 @@ const startGame = () => {
     
     /* ----------------- Create New Row ----------------- */
     const createNewRow = () => {
+        
+        /* Converts guessedLetters to goodLetters if they are correct */
         for(let i = 0; i < letters; i++) {
-            guesses.goodLetters[i] = guesses.letters[i].includes('✔️') ? guesses.letters[i][0] : '.';
-            letterBoxes[i + guesses.editIndex].appendChild(document.createTextNode(guesses.goodLetters[i]));  
-            // letterBoxes[i + guesses.editIndex - letters].id = 'rowUsed';
+            if(!goodLetters[i] || goodLetters[i] == '.') 
+                goodLetters[i] = guessedLetters[i].includes('✅') ? guessedLetters[i][0] : '.';
         };
+
+        if(randomWord != guessedLetters.join('').replaceAll('✅', '')) {
+
+            /* Creates the new row */            
+            for(let i = 0; i < letters; i++) {
+                if(letterBoxes[i + editIndex]) {
+                    letterBoxes[i + editIndex].appendChild(document.createTextNode(goodLetters[i]));
+                } else if(i == 0) endGame('lost');
+            };
+
+            /* Change the editIndex depending on the correct guesses */
+            guessedLetters = []; 
+            for(let i = 0; i < letters; i++) {
+                if(goodLetters[i] != '.') {
+                    guessedLetters.push(goodLetters[i]);
+                    editIndex++;
+                } else i = letters;
+            };
+            
+        } else endGame('won');
     };
     /* ----------------- Create New Row ----------------- */
+
+
+    /* -------------- Shows Result of Game -------------- */
+    const endGame = result => {
+        let endDiv = createElement('div', 'endDiv', document.body);
+        createElement('h1', 'endDiv', endDiv, `You ${result}!`);
+        if(result == 'won') createElement('h2', 'endDiv', endDiv, `Je hebt het woord geraden in ${tries + 1} ${tries == 0 ? 'poging' : 'pogingen'}.`);
+        else createElement('h2', 'endDiv', endDiv, `Het correcte woord was ${randomWord.toLowerCase()}.`);
+        gameEnded = true;
+    };
+    /* -------------- Shows Result of Game -------------- */
 };
