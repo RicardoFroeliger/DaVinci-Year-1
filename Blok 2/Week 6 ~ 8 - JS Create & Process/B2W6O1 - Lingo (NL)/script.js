@@ -106,7 +106,7 @@ const startGame = () => {
             for(let i = 0; i < letters; i++) {
                 if(letterBoxes[i + editIndex]) {
                     letterBoxes[i + editIndex].appendChild(document.createTextNode(goodLetters[i]));
-                } else if(i == 0) endGame('lost');
+                } else if(i == 0) endGame('verloren');
             };
 
             /* Change the editIndex depending on the correct guesses */
@@ -118,18 +118,24 @@ const startGame = () => {
                 } else i = letters;
             };
             
-        } else endGame('won');
+        } else endGame('gewonnen');
     };
     /* ----------------- Create New Row ----------------- */
 
+        
 
     /* -------------- Shows Result of Game -------------- */
     const endGame = result => {
         let endDiv = createElement('div', 'endDiv', document.body);
-        createElement('h1', 'endDiv', endDiv, `You ${result}!`);
+        let closeBtn = createElement('button', 'endDiv', endDiv, '✖');
+        closeBtn.onclick = () => endDiv.parentNode.removeChild(endDiv);
+
+        createElement('h1', 'endDiv', endDiv, `Je hebt ${result}!`);
         if(result == 'won') createElement('h2', 'endDiv', endDiv, `Je hebt het woord geraden in ${tries + 1} ${tries == 0 ? 'poging' : 'pogingen'}.`);
         else createElement('h2', 'endDiv', endDiv, `Het correcte woord was ${randomWord.toLowerCase()}.`);
+        
         gameEnded = true;
+        console.log(`Je hebt de game ${result}!`);
     };
     /* -------------- Shows Result of Game -------------- */
 };

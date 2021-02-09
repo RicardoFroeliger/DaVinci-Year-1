@@ -91,7 +91,6 @@ div.endDiv {
     transform: translate(-50%, -50%);
 }
 div.endDiv h1 {
-    margin-top: 8vmin;
     font-size: 7.5vmin;
 }
 div.endDiv h2 {
@@ -99,4 +98,16 @@ div.endDiv h2 {
     margin: 0px auto;
     margin-top: 3vmin;
     font-size: 5vmin;
+}
+div.endDiv button {
+    height: 7.5vmin;
+    width: 7.5vmin;
+    background-color: #df2936;
+    margin: 2vmin 0px 0px 62.5vmin;
+    border: 0.3vmin solid white;
+    border-radius: 15%;
+    outline: none;
+    color: white;
+    font-size: 5vmin;
+    line-height: 5vmin;
 }
