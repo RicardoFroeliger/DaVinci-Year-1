@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Altoys;
+    src: url('font.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+h1 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Altoys', sans-serif;
+    margin-bottom: 3vmin;
+}

@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    height: 100%;
+    background: linear-gradient(to bottom, #88ff88, #6666ff) no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+div { 
+    display: inline-block;
+    margin: 2vmin; 
+}
+h1 { margin: 2vmin; }
