@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Toets 1</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src='robot-arm.js'></script>
+        <script>
+            let canvas = document.getElementById('canvas');
+            let robotArm = new RobotArm(canvas);
+
+            robotArm.examLevel(1);
+            robotArm.speed = 1000;
+        
+            
+            
+            let stop = false;
+            const moveArm = (dir, qty) => {
+                for(let i = 0; i < qty; i++) dir === 'left' ? robotArm.moveLeft() : robotArm.moveRight();  
+            };
+
+            const moveBlock = col => {
+                let dir = col === null ? stop = true : (col === 'white' ? 'left' : 'right');
+                if(stop === false) {
+                    moveArm(dir, dir === 'left' ? 4 : 5);
+                    robotArm.drop();
+                    moveArm(dir === 'left' ? 'right' : 'left', dir === 'left' ? 4 : 5);  
+                } else moveArm('left', 4);
+            };
+
+            moveArm('right', 4);
+            while(stop === false) {
+                robotArm.grab();
+                moveBlock(robotArm.scan());
+            };
+
+
+
+            robotArm.run();
+        </script>
+    </body>
+</html>
