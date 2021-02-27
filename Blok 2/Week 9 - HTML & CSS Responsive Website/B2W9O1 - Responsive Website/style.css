@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 4vmin;
+    font-family: 'Archivo', sans-serif;
+}
+
+
+menu {
+    background-color: #EDDA14;
+    height: 10vh;
+    width: 100%;
+}
+menu button {
+    background-color: #EDDA14;
+    height: 7vh;
+    width: 18vw;
+    margin: 1.5vh 6vw;
+    border: 0.5vh solid #EEDF3E;
+    outline: none;
+    user-select: none;
+}
+menu button i {
+    color: #F5ED9C;
+    font-size: 6vmin;
+}
+
+
+header {
+    background-color: white;
+    height: 10vh;
+    width: 100%;
+}
+header img {
+    float: right;
+    height: 7vh;
+    margin: 1.5vh 5vw 0 0;
+}
+
+
+img.banner { 
+    width: 100%;
+}
+
+
+h2 { 
+    margin: 4vh 0 0 10vw;
+    font-weight: normal;
+}
+h2 i { 
+    color: #545454; 
+}
+
+
+hr { 
+    margin: 2vh 12vw 4vh 4vw;
+} 
+hr:last-of-type { 
+    margin-right: 4vw; 
+}
+
+
+p {
+    margin: 0 10vw 8vh 10vw;
+    line-height: 1.25em;
+}
+p.free-lesson { 
+    margin-bottom: 4vh;
+}
+
+
+a {
+    color: #2084FF;
+    text-decoration: none;
+}
+
+
+button.free-lesson {
+    height: 7.5vh;
+    width: calc(100% - 26vw);
+    background-color: #FEC106;
+    margin-bottom: 4vh;
+    border: none;
+    outline: none;
+
+    position: relative;
+    left: 10vw;
+    font-size: 1.375em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+iframe {
+    height: 50vw;
+    width: calc(100% - 8vw);
+    margin-bottom: 4vh;
+    position: relative;
+    left: 4vw;   
+}
+
+
+footer {
+    height: 5vh;
+    width: 100%;
+    background-color: #EDDA14;
+
+    font-weight: bold;
+    text-align: center;
+    line-height: 5vh;
+}
+
+@media screen and (min-width:768px) {
+    menu {
+        background-color: #EDDA14;
+        height: 5vh;
+    }
+    menu button {
+        visibility: hidden;
+    }
+
+    header {
+        height: 23vh;
+    }
+    header img {
+        float: none;
+        height: 15vh;
+        margin: 4vh 0 0 15vw;
+    }
+
+    div {
+        width: 25vw;
+        display: inline-block;
+        vertical-align: top;
+    }
+    div:nth-of-type(1) {
+        margin-left: 12.5vw;
+    }
+
+    h2 {
+        font-size: 0.8em;
+        margin: 4vh 0 0 3vw;
+    }
+
+    hr {
+        margin: 1vh 0 2vh 2vw;
+    }
+
+    p {
+        font-size: 0.6em;
+        margin: 0 3vw 8vh 3vw;
+    }
+
+    button.free-lesson {
+        width: calc(100% - 2vw);
+        left: 2vw;
+        font-size: 1em;
+    }
+
+    iframe {
+        height: 35vw;
+        width: calc(100% - 33vw);
+        margin-bottom: 4vh;
+        position: relative;
+        left: 17vw;   
+    }
+
+    footer {
+        font-size: 0.6em;
+    }
+}
