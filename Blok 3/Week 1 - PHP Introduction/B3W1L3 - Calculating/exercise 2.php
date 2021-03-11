@@ -9,14 +9,19 @@
     </head>
     <body>
         <?php 
-            $tables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            $tables = [3, 5, 8, 12];
             foreach($tables as $table) if(gettype($table) !== 'integer') die();
-
-            foreach($tables as $num) {
-                echo '<div>';
-                for($i = 1; $i <= 10; $i++) echo '<h3>'.$i.' x '.$num.' = '. ($i * $num).'</h3>';
-                echo '</div>';
+            
+            function printTables($table) {
+                if(gettype($table) !== 'array') $table = [$table];
+                foreach($table as $num) {
+                    echo '<div>';
+                    for($i = 1; $i <= 10; $i++) echo "<h3>$i x $num = ".($i * $num).'</h3>';
+                    echo '</div>';
+                };
             };
+
+            printTables($tables);
         ?>
     </body>
 </html>

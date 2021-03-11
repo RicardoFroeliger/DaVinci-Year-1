@@ -17,10 +17,5 @@
         
         echo "<body style=\"background: url('./images/$period.png') no-repeat 50% 75% fixed\">";
         echo "<div><h1>Good $period!<h1>It's currently ".date('h:ia').'</div>';
-
-        /* Made in 3 lines */
-        // date_default_timezone_set('Europe/Amsterdam');
-        // $period = date('H') >= 18 ? 'evening' : (date('H') >= 12 ? 'afternoon' : (date('H') >= 6 ? 'morning' : 'night'));
-        // echo "<body style=\"background: url('./images/$period.png') no-repeat 50% 75% fixed\"><div><h1>Good $period!<h1>It's currently ".date('H:i');
     ?>
 </html>
