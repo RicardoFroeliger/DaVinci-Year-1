@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: grey;
+}
+
+
+img.logo {
+    width: 50%;
+    position: relative;
+    left: calc(25% - 2.5vh);
+    margin: 2.5vh;
+}
+
+
+form {
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: darkred;
+    overflow: hidden;
+    margin-bottom: 2.5vh;
+}
+nav a {
+    float: left;
+    padding: 2.25vh;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 3.2vmin;
+}
+
+h1 {
+    font-size: 4.2vmin;
+    margin: 4vh 2vh;
+}
+
+p {
+    font-size: 2.6vmin;
+    margin: 2vh;
+}
+
+div.container {
+    display: flex;
+    align-items: center;
+}
+label, input, b, span {
+    font-size: 2.8vmin;
+    margin: 2vh 2vh 0 2vh;
+}
+label {
+    width: 60vmin;
+}
+span {
+    color: red;
+    margin: 0;
+}
+span.error {
+    margin-left: 2vh;
+    font-size: 2.8vmin;
+}
+input {
+    padding: 1vh;
+    width: 40vh;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+div.submitContainer {
+    position: relative;
+    left: calc(60vmin + 4vh);
+    width: 0;
+}
+input[type=submit]{
+    width: 10vh;
+    cursor: pointer;
+}
+
+footer {
+    color: white;
+    font-size: 2.5vmin;
+    text-align: center;
+    background-color: darkred;
+    padding: 2.5vh;
+    margin-top: 2.5vh;
+}

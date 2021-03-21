@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+label, input {
+    font-size: 18px;
+}
+
+form {
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 5%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+input[type=text] {
+    padding: 8px 12px;
+    margin: 12px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #018DFE;
+    color: white;
+    cursor: pointer;
+
+    padding: 8px 12px;
+    margin: 12px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+main {
+    margin: 20px;
+}
+main h1 {
+    font-size: 22px;
+    font-weight: normal;
+}
