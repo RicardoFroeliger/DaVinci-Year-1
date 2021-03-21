@@ -1,0 +1,74 @@
+DISTINCT
+
+1. SELECT DISTINCT type FROM `animal`
+2. SELECT DISTINCT profession FROM `npc`
+
+
+AND, OR and NOT
+
+1. SELECT * FROM `creature` WHERE name='killer bee' OR name='orc'
+2. SELECT * FROM `animal` WHERE speed=6 AND defense=5
+3. SELECT * FROM `animal` WHERE NOT type='sheep'
+4. SELECT COUNT(*) FROM `animal` WHERE type='wolf' OR type='bear' OR type='eagle'
+5. SELECT * FROM `person` WHERE attack=10 AND defense=10 AND agility=10
+6. SELECT * FROM `city` WHERE region=1 OR region=2
+7. SELECT * FROM `hero` WHERE NOT intelligence=30 AND NOT intelligence=90
+
+
+MIN and MAX
+
+1. SELECT MIN(speed) FROM `animal`
+2. SELECT MAX(speed) FROM `animal`
+3. SELECT MIN(attack) FROM `weapon`
+4. SELECT MAX(price) FROM `weapon`
+
+
+IN
+
+1. SELECT * FROM `creature` WHERE name IN ('killer bee', 'orc')
+2. SELECT * FROM `animal` WHERE type IN ('wolf', 'bear', 'eagle') ORDER BY type
+3. SELECT * FROM `creature` WHERE name NOT IN ('killer bee', 'orc')
+4. SELECT * FROM `city` WHERE region IN (3, 4)
+5. SELECT * FROM `city` WHERE region IN (3, 4) ORDER BY name
+6. SELECT COUNT(*) FROM `city` WHERE region IN (3, 4)
+
+
+BETWEEN and SQL Operators
+
+1. SELECT * FROM `weapon` WHERE price BETWEEN 100 AND 1000
+2. SELECT * FROM `weapon` WHERE attack BETWEEN 300 AND 600
+3. SELECT * FROM `animal` WHERE defense BETWEEN 7 AND 9
+4. SELECT * FROM `person` WHERE gold>1800
+5. SELECT * FROM `person` WHERE gold>1850
+6. SELECT * FROM `person` WHERE gold>=1800
+7. SELECT * FROM `weapon` WHERE price<300
+
+
+LIKE
+
+1. SELECT * FROM `person` WHERE name LIKE 'b%'
+2. SELECT * FROM `animal` WHERE type LIKE '%a%'
+3. SELECT * FROM `animal` WHERE type LIKE '%ea%'
+4. SELECT * FROM `weapon` WHERE name LIKE '%d'
+
+
+TOP, LIMIT, or ROWNUM
+
+1. SELECT * FROM `person` LIMIT 10
+2. SELECT * FROM `weapon` ORDER BY price DESC LIMIT 5
+3. SELECT * FROM `weapon` WHERE attack BETWEEN 700 AND 900 ORDER BY attack DESC LIMIT 3
+
+
+General Questions
+1. SELECT name FROM `creature` WHERE health!=max_health
+2. The lost search | SELECT * FROM `quest` WHERE gold=0
+3. 7 | SELECT COUNT(*) FROM `city` WHERE region=5
+4. SELECT * FROM `animal` WHERE owner!=0
+5. 16 | SELECT COUNT(*) FROM `quest` WHERE experience>3000
+6. SELECT * FROM `quest` WHERE gold>experience
+7. Shell Chain | SELECT * FROM `person` WHERE name='bowser' 
+                 SELECT name FROM `weapon` WHERE id=48
+8. SELECT * FROM `animal` WHERE type='tiger' ORDER BY speed DESC LIMIT 1 
+9. Sheep & Sea Snake | SELECT * FROM `animal` WHERE owner!=0 ORDER BY owner
+10. SELECT * FROM `region` WHERE name='south groval'
+    SELECT * FROM `person` WHERE `id` = 15

@@ -1,0 +1,12 @@
+INSERT INTO, UPDATE, DELETE
+
+1. INSERT INTO `animal` (type, speed, defense, loyalty, owner) VALUES ('Dog', 6, 6, 0, 0)
+3. UPDATE `animal` SET speed=7, defense=5 WHERE type='dog'
+5. UPDATE `animal` SET speed=0, defense=0, loyalty=0, owner=0 WHERE type='dog'
+7. DELETE FROM `animal` WHERE type='dog'
+9. INSERT INTO `animal` (type, speed, defense, loyalty, owner) 
+   VALUES ('Dog', 0, 0, 0, 0), ('Dog', 0, 0, 0, 0)
+10. UPDATE `animal` SET speed=6, defense=6 WHERE type='dog'
+11. DELETE FROM `animal` WHERE type='dog'
+
+2, 4, 6, 8. SELECT * FROM `animal` WHERE type='dog'
