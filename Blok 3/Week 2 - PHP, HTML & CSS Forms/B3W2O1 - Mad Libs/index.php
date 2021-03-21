@@ -45,7 +45,7 @@
                         foreach($inputs as $name => $q) ${$name} = validate($_POST[$name]);
             ?>
                         <p>
-                            There is panic in the kingdom of <?php echo $animal;?>.<br>
+                            There is panic in the kingdom of <?php echo $country;?>.<br>
                             King <?php echo $teacher;?> is desperate, and when king <?php echo $teacher;?> desperate,
                             then he calls his final counselor <?php echo $person;?>.<br><br>
 
