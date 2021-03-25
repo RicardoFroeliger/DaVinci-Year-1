@@ -32,7 +32,10 @@
         <img src="./images/MadLibs_logo.png" alt="Logo" class="logo">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
-            <?php require_once './php/navigator.php'; ?>
+            <nav>
+                <a href="./index.php">There is panic...</a>
+                <a href="./php/ignorance.php">Ignorance</a>
+            </nav>
 
             <h1>There is panic...</h1>
             
@@ -68,7 +71,7 @@
                 };
             ?>
 
-            <?php require_once './php/formGen.php'; ?>
+            <?php if($allInputsFilled == false) require_once './php/formGen.php'; ?>
 
             <footer>Copyright © 2021 Ricardo Froeliger</footer>
         </form>
