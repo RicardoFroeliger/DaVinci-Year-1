@@ -3,10 +3,7 @@
 
 Query the database with the correct SQL statements, i.e. get answers to the questions below.
 
-### Exercise 1
-
-
-#### SELECT *
+### SELECT *
 1. With which query do you retrieve all heroes from the database?
 2. With which query do you retrieve all persons from the database?
 3. How many people are NPCs?
@@ -17,28 +14,23 @@ Query the database with the correct SQL statements, i.e. get answers to the ques
 8. With which query do you show all cities sorted by name (descending)?
 9. How many cities are there?
 
-#### SELECT [column], [column]
+### SELECT [column], [column]
 1. With which query do you retrieve all names of protection from the database?
 2. With which query do you retrieve all names and attack power of weapons from the database?
 3. With which query do you retrieve all the names and health of all creatures from the database?
 
-#### SELECT WHERE
+### SELECT WHERE
 1. With which query do you show only the sheep that can be found in RubyQuest?
 2. With which query do you see how many sheep can be found in RubyQuest?
 3. How many sea snakes can be found in RubyQuest?
 4. Which person has id 7?
 5. With which 2 queries can you check whether the person in question 4 is a hero or an NPC?
 
-
-
-### Exercise 2
-
-
-#### DISTINCT
+### DISTINCT
 1. Which query shows which different animals exist?
 2. Which query shows which professions there are at the NPCs?
 
-#### AND, OR and NOT
+### AND, OR and NOT
 1. What query can you use to show creatures that match "Killer Bee" or "Orc"?
 2. What query can you use to show the animals that have speed ​​6 and defense 5?
 3. Which query shows all animals except the sheep?
@@ -47,13 +39,13 @@ Query the database with the correct SQL statements, i.e. get answers to the ques
 6. Which query shows the cities that are located in region 1 or 2?
 7. Which query shows all heroes with intelligence other than 30 or 90?
 
-#### MIN and MAX
+### MIN and MAX
 1. Which query shows what minimum speed the animals have?
 2. Which query shows the speed of the fastest animal?
 3. Which query shows what the minimum attack of a weapon is?
 4. Which query shows how much the most expensive weapon costs?
 
-#### IN
+### IN
 1. Which query shows creatures that match "Killer Bee" or "Orc"?
 2. Which query shows the number of animals sorted by alphabet that match "Wolf" or "Bear" or "Eagle"?
 3. Which query shows all creatures except the "Killer Bee" and the "Orc"?
@@ -61,7 +53,7 @@ Query the database with the correct SQL statements, i.e. get answers to the ques
 5. Which query allows you to sort question 4 alphabetically?
 6. Which query shows how many cities are within the South Groval or Nort Groval region?
 
-#### BETWEEN and SQL Operators
+### BETWEEN and SQL Operators
 1. Which query shows the weapons with a price of 100 - 1000?
 2. Which query shows the weapons with an attack of 300 - 600?
 3. Which query shows the number of animals that have a defense of 7 - 9?
@@ -70,18 +62,18 @@ Query the database with the correct SQL statements, i.e. get answers to the ques
 6. Which query shows the people who have 1850 or more gold?
 7. Which query shows the weapons that cost less than 300?
 
-#### LIKE
+### LIKE
 1. With which query can you show all persons starting with the letter B?
 2. With which query can you show all animals containing the letter a?
 3. With which query can you show all animals with a letter a behind the letter e?
 4. With which query can you show all weapons that end with the letter d?
 
-#### TOP, LIMIT or ROWNUM
+### TOP, LIMIT or ROWNUM
 1. Which query shows the first 10 people
 2. Which query shows you the 5 most expensive weapons?
 3. Which query shows the best 3 weapons that have an attack of 700 - 900?
 
-#### General Questions
+### General Questions
 1. What query do you use to get the names of the creatures that are injured?
 2. For which quest(s) do you not receive gold?
 3. How many cities are there in the Breach region?
@@ -93,12 +85,7 @@ Query the database with the correct SQL statements, i.e. get answers to the ques
 9. Which 2 pets have the same owner?
 10. Which query shows the boss of the South Groval region?
 
-
-
-### Exercise 3
-
-
-#### INSERT INTO, UPDATE, DELETE
+### INSERT INTO, UPDATE, DELETE
 1. Add a new animal in the animal table with the following data: type = dog, speed and defense = 6 and loyalty and owner are given the value 0. With which query can you add the new animal?
 2. With which query can you see that the animal has been added?
 3. Change the speed to 7 and the defense to 5 of the dog you added in question 1. Which query can you do this with?

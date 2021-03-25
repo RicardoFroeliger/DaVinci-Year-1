@@ -1,7 +1,41 @@
+SELECT * 
+
+1. SELECT * FROM `hero`
+2. SELECT * FROM `person`
+3. 16 | SELECT COUNT(*) FROM `npc`
+4. SELECT * FROM `quest`
+5. 105 | SELECT COUNT(*) FROM `animal`
+6. SELECT * FROM `creature`
+7. SELECT * FROM `person` ORDER BY name
+8. SELECT * FROM `city` ORDER BY name DESC
+9. 27 | SELECT COUNT(*) FROM `city`
+
+
+
+SELECT [column], [column]
+
+1. SELECT name FROM `armor`
+2. SELECT name, attack FROM `weapon`
+3. SELECT name, health FROM `creature`
+
+
+
+SELECT WHERE
+
+1. SELECT * FROM `animal` WHERE type='sheep'
+2. SELECT COUNT(*) FROM `animal` WHERE type='sheep'
+3. 6 [SELECT COUNT(*) FROM `animal` WHERE type='sea snake']
+4. Shrek [SELECT * FROM `person` WHERE id=7]
+5. SELECT * FROM `hero` WHERE person=7
+   SELECT * FROM `npc` WHERE person=7
+
+
+
 DISTINCT
 
 1. SELECT DISTINCT type FROM `animal`
 2. SELECT DISTINCT profession FROM `npc`
+
 
 
 AND, OR and NOT
@@ -15,12 +49,14 @@ AND, OR and NOT
 7. SELECT * FROM `hero` WHERE NOT intelligence=30 AND NOT intelligence=90
 
 
+
 MIN and MAX
 
 1. SELECT MIN(speed) FROM `animal`
 2. SELECT MAX(speed) FROM `animal`
 3. SELECT MIN(attack) FROM `weapon`
 4. SELECT MAX(price) FROM `weapon`
+
 
 
 IN
@@ -31,6 +67,7 @@ IN
 4. SELECT * FROM `city` WHERE region IN (3, 4)
 5. SELECT * FROM `city` WHERE region IN (3, 4) ORDER BY name
 6. SELECT COUNT(*) FROM `city` WHERE region IN (3, 4)
+
 
 
 BETWEEN and SQL Operators
@@ -44,12 +81,14 @@ BETWEEN and SQL Operators
 7. SELECT * FROM `weapon` WHERE price<300
 
 
+
 LIKE
 
 1. SELECT * FROM `person` WHERE name LIKE 'b%'
 2. SELECT * FROM `animal` WHERE type LIKE '%a%'
 3. SELECT * FROM `animal` WHERE type LIKE '%ea%'
 4. SELECT * FROM `weapon` WHERE name LIKE '%d'
+
 
 
 TOP, LIMIT, or ROWNUM
@@ -59,7 +98,9 @@ TOP, LIMIT, or ROWNUM
 3. SELECT * FROM `weapon` WHERE attack BETWEEN 700 AND 900 ORDER BY attack DESC LIMIT 3
 
 
+
 General Questions
+
 1. SELECT name FROM `creature` WHERE health!=max_health
 2. The lost search | SELECT * FROM `quest` WHERE gold=0
 3. 7 | SELECT COUNT(*) FROM `city` WHERE region=5
@@ -72,3 +113,17 @@ General Questions
 9. Sheep & Sea Snake | SELECT * FROM `animal` WHERE owner!=0 ORDER BY owner
 10. SELECT * FROM `region` WHERE name='south groval'
     SELECT * FROM `person` WHERE `id` = 15
+
+
+
+INSERT INTO, UPDATE, DELETE
+
+1. INSERT INTO `animal` (type, speed, defense, loyalty, owner) VALUES ('Dog', 6, 6, 0, 0)
+3. UPDATE `animal` SET speed=7, defense=5 WHERE type='dog'
+5. UPDATE `animal` SET speed=0, defense=0, loyalty=0, owner=0 WHERE type='dog'
+7. DELETE FROM `animal` WHERE type='dog'
+9. INSERT INTO `animal` (type, speed, defense, loyalty, owner) 
+   VALUES ('Dog', 0, 0, 0, 0), ('Dog', 0, 0, 0, 0)
+10. UPDATE `animal` SET speed=6, defense=6 WHERE type='dog'
+11. DELETE FROM `animal` WHERE type='dog'
+2, 4, 6, 8. SELECT * FROM `animal` WHERE type='dog'

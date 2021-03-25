@@ -1,0 +1,52 @@
+Plant. A. Basics / Operators
+
+1. SELECT * FROM `plant` WHERE kleur = 'rood'
+2. SELECT plantnaam FROM `plant` WHERE kleur = 'geel' AND soort = 'vast'
+3. SELECT DISTINCT soort FROM `plant`
+4. SELECT DISTINCT plantnaam FROM `plant` WHERE plantnaam LIKE 'z%' ORDER BY plantnaam
+5. SELECT DISTINCT plantnaam FROM `plant` WHERE plantnaam LIKE '%y%'
+6. SELECT DISTINCT plantnaam FROM `plant` WHERE plantnaam LIKE 'b_e%'
+7. SELECT plantnaam FROM `plant` WHERE `bloeitijd-start` = 3
+8. SELECT plantnaam, hoogte, kleur, prijs FROM `plant` WHERE soort = 'vast' 
+   OR soort = '1-jarig' OR soort = '2-jarig' OR soort = 'kruid' ORDER BY kleur
+9. SELECT plantnaam, hoogte, kleur, prijs FROM `plant` WHERE 
+   (soort = 'vast' OR soort = '1-jarig' OR soort = '2-jarig' OR soort = 'kruid')
+   AND (prijs BETWEEN 1 AND 2) ORDER BY kleur, plantnaam
+10. SELECT * FROM `plant` WHERE kleur IS NULL ORDER BY plantnaam
+11. SELECT plantnaam, soort, hoogte, prijs, kleur FROM `plant` WHERE kleur = 'wit'
+    AND soort != 'boom' AND prijs > '10'
+12. SELECT plantnaam, soort, prijs FROM `plant` WHERE soort = 'heester' 
+    AND (prijs = 3 OR prijs = 4 OR prijs = 5 OR prijs = 6 OR prijs = 7)
+13. SELECT plantnaam, `bloeitijd-einde`, `bloeitijd-start`, 
+    (`bloeitijd-einde` - `bloeitijd-start` + 1) AS "bloeitijd_in_maanden"
+    FROM `plant` WHERE (`bloeitijd-einde` - `bloeitijd-start`) + 1 = 4
+14. SELECT * FROM `plant` WHERE soort = 'water' ORDER BY plantnaam
+15. SELECT plantnaam, kleur, hoogte FROM `plant` WHERE kleur IS NULL
+16. SELECT plantnaam, `bloeitijd-start`, `bloeitijd-einde` FROM `plant`
+    WHERE `bloeitijd-einde` = 10 OR `bloeitijd-einde` = 9
+17. SELECT plantnaam, soort FROM `plant` WHERE plantnaam LIKE '%kruid%' AND soort != 'kruid'
+18. SELECT plantcode, plantnaam FROM `plant` WHERE plantnaam LIKE 'm%m' OR plantnaam LIKE 'a%a'
+19. SELECT plantcode, plantnaam FROM `plant` WHERE plantnaam LIKE '%_____%'
+20. SELECT plantcode, plantnaam FROM `plant` WHERE plantnaam LIKE '_____'
+21. SELECT plantcode, plantnaam FROM `plant` WHERE LENGTH(plantnaam) <= 5
+22. SELECT plantnaam, kleur FROM `plant` WHERE kleur = 'paars' AND hoogte BETWEEN 10 AND 20
+23. SELECT plantnaam, soort, kleur, hoogte FROM `plant` WHERE kleur = 'wit'
+    AND (hoogte BETWEEN 500AND 1000) AND soort != 'boom'
+24. SELECT plantnaam FROM `plant` WHERE hoogte IS NULL
+
+
+
+Plant. B. Functions / Math
+
+1. SELECT COUNT(*) FROM `plant` 
+2. SELECT COUNT(DISTINCT kleur) + COUNT(DISTINCT CASE WHEN kleur IS NULL THEN 1 END) FROM `plant`
+3. SELECT COUNT(*) FROM `plant` WHERE kleur IS NULL
+4. SELECT AVG(prijs) AS 'GemiddeldePrijs' FROM `plant` WHERE soort = 'water'
+5. SELECT MAX(hoogte) FROM `plant` WHERE soort = 'boom'
+6. SELECT plantnaam, prijs, (prijs * 1.05) AS vijf_procent FROM `plant` WHERE soort = 'heester'
+7. SELECT SUM(bedrag) AS 'totaalbedrag' FROM `bestelling`
+8. SELECT MIN(bedrag) AS 'kleinsteBedrag', MAX(bedrag) AS 'grootsteBedrag' FROM `bestelling`
+9. SELECT round(AVG(levertijd / 1.0437387606), 4) AS 'Gemiddeldelevertijd' FROM `offerte`
+10. SELECT COUNT(*) FROM `leverancier` WHERE levwoonplaats = 'lisse'
+11. SELECT AVG(hoogte) FROM `plant` WHERE prijs BETWEEN 10 AND 15
+12. SELECT SUM(prijs) AS 'Totaal' FROM `plant` WHERE hoogte > 100
