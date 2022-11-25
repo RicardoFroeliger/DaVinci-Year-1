@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url('../images/cheese.png'), linear-gradient(to right, rgba(204, 255, 204, 1), rgba(153, 255, 153, 1));
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position-x: 50%;   
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 27px;
+
+    position: relative;
+    top: 120px;
+    transform: translateY(-20%);
+}
+
+.button {
+    width: 200px;
+    height: 66px;
+    cursor: pointer;
+    background-color: limegreen;
+    border: solid white;
+
+    font-size: 28px;
+    color: white;
+    position: absolute;
+}
+.centerButton {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.leftButton {
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%, -50%);
+}
+.rightButton {
+    background-color: darkred;
+    top: 50%;
+    left: 65%;
+    transform: translate(-65%, -50%);
+}
