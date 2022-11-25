@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>B1W7L1 - Spacegame ~9</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-    <script src="../js/spacegame.js" type="application/javascript"></script>
-</head>
-<body>
-    <div id="container"></div>
-    <script>
-        var spaceShip = new SpaceShip(document.getElementById('container'));
-        spaceShip.loadLevel(9);
-        spaceShip.run(function () {
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1W7L1 - Spacegame ~ 9</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/spacegame.js"></script>
 
-            for(let i = 0; i < 2; i++) {
-                spaceShip.rotateRight();
-                spaceShip.moveForward();
-                spaceShip.rotateRight();
-                for(let j = 0; j < 5; j++) spaceShip.moveForward();
-                
-                spaceShip.rotateLeft();
-                spaceShip.moveForward();
-                spaceShip.rotateLeft();
-                for(let j = 0; j < 5; j++) spaceShip.moveForward();
-            }// ;
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id='container'></div>
+        <script>
+            var spaceShip = new SpaceShip(document.getElementById('container'));
+            spaceShip.loadLevel(9);
+            spaceShip.run(function () {
 
-        });
-    </script>
-</body>
+                for(let i = 0; i < 2; i++) {
+                    spaceShip.rotateRight();
+                    spaceShip.moveForward();
+                    spaceShip.rotateRight();
+                    for(let j = 0; j < 5; j++) spaceShip.moveForward();
+                    
+                    spaceShip.rotateLeft();
+                    spaceShip.moveForward();
+                    spaceShip.rotateLeft();
+                    for(let j = 0; j < 5; j++) spaceShip.moveForward();
+                }// ;
+
+            });
+        </script>
+    </body>
 </html>

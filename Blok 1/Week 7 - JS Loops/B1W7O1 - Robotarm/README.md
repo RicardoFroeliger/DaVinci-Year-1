@@ -4,14 +4,14 @@
 ### Setup Code Exercise 1 / 12
 ```javascript
 <script>
-  var canvas = document.getElementById("canvas");
-  var robotArm = new RobotArm(canvas);
+    var canvas = document.getElementById("canvas");
+    var robotArm = new RobotArm(canvas);
 
-  robotArm.loadLevel("exercise 1");
+    robotArm.loadLevel("exercise 1");
 
-  // Enter your code here
+    // Enter your code here
 
-  robotArm.run();
+    robotArm.run();
 </script>
 ```
 
