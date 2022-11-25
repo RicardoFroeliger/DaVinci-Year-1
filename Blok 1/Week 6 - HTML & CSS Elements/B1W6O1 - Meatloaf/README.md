@@ -1,8 +1,7 @@
 # B1W6O1 - Meatloaf
 ## Created by Ricardo Froeliger
 
-For this week's assignment, you will try to copy the added image (assignment.png) as exactly as possible using HTML and CSS. Because you try to copy the design as exactly as possible, there are very concrete technical requirements, read these carefully. The used picture of the meatloaf is also included.
-You will also make two new pages after working out the design. A recipe of an appetizer and a recipe of a dessert. So eventually we get a website for a three-course menu.
+For this week's assignment, you will try to copy the design (design.png) as close as possible using HTML and CSS. Because you try to copy the design as exactly as possible, there are very concrete technical requirements, read these carefully. The used picture of the meatloaf is also included. You will also make two new pages after working out the design. A recipe of an appetizer and a recipe of a dessert. So eventually we get a website for a three-course menu.
 
 ### Functional Requirements
 * The customer can visit the webpage via his browser with the meatloaf recipe which exactly matches the design.
@@ -23,4 +22,5 @@ You will also make two new pages after working out the design. A recipe of an ap
 * You create a neat menu for each page so that you can navigate between the appetizer, the main course and the dessert.
 * The web pages with the recipe for an appetizer and the web page with the recipe for a dessert do not have to meet the above technical requirements. You can style these pages yourself.
 
-![Design](images/design.png)
+
+![IMAGE](images/design.png)

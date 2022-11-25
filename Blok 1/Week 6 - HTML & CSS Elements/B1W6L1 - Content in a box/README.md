@@ -4,4 +4,4 @@
 Copy the element below using html and css. You may use the div element for this.
 
 
-![Design](images/design.jpg)
+![IMAGE](images/design.jpg)

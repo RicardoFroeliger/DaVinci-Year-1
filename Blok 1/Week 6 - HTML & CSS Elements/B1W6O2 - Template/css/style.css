@@ -10,6 +10,7 @@ body {
     color: white;
     font-family: 'Roboto', sans-serif;
 }
+
 img#logo {
     left: 50%;
     top: 40%;
@@ -56,6 +57,7 @@ div h2 {
     color: black;
     line-height: 0px;
 }
+
 i {
     background-color: #CACACA;
     color: white;
