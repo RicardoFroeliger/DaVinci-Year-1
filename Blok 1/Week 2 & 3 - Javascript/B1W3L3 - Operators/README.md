@@ -1,4 +1,4 @@
-# B1W3L3 - Operators
+# B1W2L3 - Operators
 ## Created by Ricardo Froeliger
 
 1. Create a JavaScript application that calculates the 6 times table
@@ -12,6 +12,5 @@ With text also make sure that you can see the calculation (and not just the resu
 * Divide the result by 5
 * Subtract 12 from the outcome
  
-4. Perform calculations with input of number
-Leave the calculations at point 3 in the JavaScript file and perform the same calculations as described in step 3, but now you ask the user to enter a number. 
-Do these calculations first with the number 12 and then enter a few other numbers.
+4. Perform calculations with input of a number.
+5. Use the same JavaScript code and perform the same calculations as described in step 3, but now you ask the user to enter a number.
