@@ -1,9 +1,11 @@
 # B1W8L1 - Over'all Grid
 ## Created by Ricardo Froeliger
 
-For this week's assignment you are going to copy the image (design.png) as exactly as possible by means of HTML and CSS. Because you try to copy the design as exactly as possible, there are very concrete technical requirements, read these as possible. The pictures used are included.
+For this week's assignment you are going to copy the image (design.png) as close as possible by means of HTML and CSS. Because you try to copy the design as exactly as possible, there are very concrete technical requirements, read these as possible. The pictures used are included.
 
-![Design](images/design.png)
+
+![IMAGE](images/design.png)
+
 
 You will also make two new pages after working out the design.<br>
 One page with an explanation of the cars that you can order from this company and one page with the clothes they sell with it.<br>
