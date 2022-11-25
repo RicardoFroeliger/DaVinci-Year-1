@@ -2,6 +2,7 @@ body {
     background: linear-gradient(to right, #ccffcc, #99ff99);
     margin: 0;
 }
+
 a, p, h1 {
     font-family: 'Noto Sans JP', sans-serif;
     letter-spacing: 1px;
@@ -23,6 +24,7 @@ img {
     width: 300px;
     border-radius: 10%;
 }
+
 /* Navigator */
 nav {
     background-color: #333333;

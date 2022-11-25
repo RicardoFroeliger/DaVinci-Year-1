@@ -16,5 +16,4 @@
 * Make sure there is a correct folder structure for your files.
 * Use multiple web pages for your portfolio.
 * Make sure you can navigate from each page with a link to the other page.
-* Submit your assignment via Git and post the link here in It's learning,
 * **Make sure we get an impression of you as a person. Think three times about the content!**
