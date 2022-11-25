@@ -1,8 +1,3 @@
-/**
- * Ricardo Froeliger
- * Davinci College Software Developer 
-**/
-
 /* Storage Variables */
 let smallPizza = 0,      mediumPizza = 0,    largePizza = 0;
 const SMALLPRICE = 4.99, MEDIUMPRICE = 7.49, LARGEPRICE = 9.99;
