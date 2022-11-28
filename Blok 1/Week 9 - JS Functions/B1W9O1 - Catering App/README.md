@@ -1,14 +1,9 @@
 # B1W9O1 - Catering App
 ## Created by Ricardo Froeliger
 
-In the city there is a new Café-Bar where you can enjoy a drink with your friends and you can also order tasty snacks. <br>
-You come up with the name of the Café-Bar yourself. The Café-Bar asks you to make a JS application so that they can easily keep track of the orders and of course you must also be able to request the bill.
+In the city there is a new Café-Bar where you can enjoy a drink with your friends and you can also order tasty snacks. You come up with the name of the Café-Bar yourself. The Café-Bar asks you to make a JS application so that they can easily keep track of the orders and of course you must also be able to request the bill.
 
-You first get started with only the drinks, if the JS application works well and then add that you can also order snacks. <br>
-When programming the JS application you must of course use functions. <br>
-The following functions should be seen: displaying the bill, adding orders and calculating the prices.<br> 
-Think of good function names for this yourself!
-
+You first get started with only the drinks, if the JS application works well and then add that you can also order snacks. When programming the JS application you must of course use functions. The following functions should be seen: displaying the bill, adding orders and calculating the prices. Think of good function names for this yourself!
 
 
 ### Part 1
