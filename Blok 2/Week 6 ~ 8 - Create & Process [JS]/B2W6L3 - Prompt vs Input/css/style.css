@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+}
+
+body {
+    background: linear-gradient(to right, #e66465, #9198e5);
+    font-family: 'Roboto', sans-serif;
+    margin: 5vmin 10vmin;
+}
+input {
+    width: 30vmin;
+    height: 6vmin;
+    font-size: 5vmin;
+    margin-bottom: 3vmin;
+}

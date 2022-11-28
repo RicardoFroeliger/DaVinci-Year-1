@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: grey;
+    font-family: 'Roboto', sans-serif;
+}
+
+div, input {
+    width: 120vmin;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+div.top {
+    height: 50vmin;
+    background: #ffdc73;
+    top: calc(50% - 15vmin);
+}
+div.bottom {
+    height: 30vmin;
+    background: white;
+    top: calc(50% + 25vmin);
+}
+div.box {
+    height: 10vmin;
+    width: 10vmin;
+    background: lightgrey;
+    border: 0.5vmin solid black;
+    top: 50%;
+    font-size: 9vmin;
+    text-align: center;
+}
+
+input {
+    height: 5vmin;
+    width: 35vmin;
+    font-size: 5vmin;    
+}
+input.top {
+    top: calc(50% - 6vmin);
+}   
+input.bottom {
+    top: calc(50% + 6vmin);
+}
+
+h1 {
+    width: 30vmin;
+    font-size: 3vmin;
+    position: absolute;
+    left: calc(50% - 40vmin);
+    transform: translate(-50%, -50%);
+}
+h1.top {
+    top: calc(50% - 6vmin);
+}
+h1.bottom {
+    top: calc(50% + 6vmin);
+}

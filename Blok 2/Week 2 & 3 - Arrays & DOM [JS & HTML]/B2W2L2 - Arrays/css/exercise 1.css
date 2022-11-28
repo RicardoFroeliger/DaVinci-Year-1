@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(to right, #e66465, #9198e5);
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    transform: translate(-10%, -30%);
+}
+h2 {
+    margin-top: 28px;
+}
+h3 {
+    margin-top: 8px;
+}
