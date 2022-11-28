@@ -1,0 +1,49 @@
+Primary: #222931   /* Donker grijs */
+
+- Menubalk
+- Lopende tekst
+- Tekst ribbon
+- Tekst banners onder
+- Titels footer
+- Footerbalk
+
+- Hover menu items tekst
+- Hover button ribbon
+- Hover banner onder
+
+
+
+Secondary: #ffe718 /* Geel */
+
+- Hover Menu items
+- Ribbon
+- Tekstkleur woorden met extra tooltip
+
+
+
+Tertiary: #5f656d /* Midden grijs */
+
+- Breadcrumb
+- Footer lopende tekst incl adres
+
+
+
+Alternate: #aeb6be /* Licht grijs */
+
+- Iconen footer
+- Tooltip
+
+
+
+Alternate 2: #ffffff; /* Wit */
+
+- Menu items tekst
+- Banner boven tekst
+- Tooltip tekst
+- Hover button ribbon tekst
+- Hover banner onder iconen 
+- Hover banner onder tekst
+
+
+
+Banner background: rgba(34,41,49,0.8);

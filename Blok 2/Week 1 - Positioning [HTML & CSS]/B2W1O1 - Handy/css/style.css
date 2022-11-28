@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    background-color: lightslategray;
+    font-family: 'Archivo', sans-serif;
+}
+div.container {
+    width: 1250px;
+    background-color: white;
+}
+div.center {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+/* Header */
+header > div.center {
+    width: 950px;
+}
+img.logo {
+    padding: 20px 24px;
+}
+img.header {
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    bottom: 25px;
+}
+
+
+
+/* Header: Navigator */
+nav.navbar ul {
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #222931;
+}
+nav.navbar li:first-child {
+    margin-left: 25px;
+}
+nav.navbar li {
+    float: left;
+}
+nav.navbar a, 
+div.dropdown p {
+    display: block;
+    text-decoration: none;
+    padding: 18px 10px;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+div.dropdown i {
+    font-size: 12px;
+    color: white;
+    margin-left: 4px;
+}
+div.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #222931;
+    padding-bottom: 8px;
+}
+div.dropdownContent a {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: left;
+    padding: 8px 100px 8px 8px;
+}
+nav.navbar a:hover, 
+div.dropdown p:hover,
+div.dropdown:hover p,
+div.dropdown:hover i {
+    color: #222931;
+    background-color: #ffe718;
+}
+nav.navbar a:hover i,
+div.dropdown p:hover i {
+    color: #222931;
+}
+div.dropdown:hover div.dropdownContent {
+    display: block;
+}
+div.dropdown p:hover {
+    cursor: default;
+}
+
+
+
+/* Banners */
+div.banners {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    padding: 25px 0;
+}
+div.banners > div {
+    position: relative;
+    width: 300px;
+    height: 220px;
+}
+div.banners > div h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    visibility: hidden;
+    user-select: none;
+}
+div.banners > div:hover {
+    cursor: pointer;
+    background-color: #222931;
+}
+div.banners > div:hover h1 {
+    visibility: visible;          
+}
+div.banners > div:hover > div {
+    position: absolute;
+    background-color: #22293199; /*rgba(34,41,49,0.8)*/
+    width: 300px;
+    height: 220px;
+}
+
+
+
+/* Services */
+div.services {
+    width: 950px;
+}
+div.services h1 {
+    font-size: 24px !important;
+    color: #222931;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+div.services p, div.services *, div.services {
+    font-size: 16px !important;
+    color: #222931;
+    font-weight: 500;
+    line-height: 24px;
+}
+div.services span {
+    color: #ffe718;
+    cursor: default;
+}
+
+
+/* Ribbon */
+div.ribbon {
+    margin: 25px 0 50px 0;
+    height: 125px;
+    background-color: #ffe718
+}
+div.text {
+    width: 950px;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+div.ribbon h1, 
+div.ribbon p {
+    display: inline;
+    color: #222931;
+    font-weight: 700;
+}
+div.ribbon h1 {
+    font-size: 34px;
+    margin-right: 20px;
+}
+div.ribbon p {
+    font-size: 16px;
+}
+button.learnMore {
+    border: none;
+    padding: 12px 64px;
+    float: right;
+    background-color: white;
+
+    font-size: 12px;
+    font-weight: 600; /*500*/
+    color: #222931;
+    user-select: none;
+}
+button.learnMore:hover {
+    cursor: pointer;
+    background-color: #222931;
+    color: white;
+}
+
+
+
+/* Footer */
+img.footer {
+    width: 100%;
+}
+div.footerHr {
+    width: 950px;
+    margin: 10px 0 50px 0;
+}
+div.footerHr hr {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+
+
+/* Footer: Buttons */
+div.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    position: relative;
+    bottom: 40px;
+}
+div.buttons > div {
+    width: 300px;
+    background-color: #ffe718;
+    padding: 18px 0;
+}
+div.buttons > div > div {
+    width: auto;
+    display: inline-block;
+}
+div.buttons i {
+    font-size: 44px;
+    color: #222931;
+    padding: 0 22px;
+    user-select: none;
+    display: inline-block;
+}
+div.buttons h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222931;
+    user-select: none;
+}
+div.buttons p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222931;
+    line-height: 18px;
+    user-select: none;
+}
+div.buttons > div:hover, 
+div.buttons > div:hover > div {
+    cursor: pointer;
+    background-color: #222931;
+}
+div.buttons > div:hover i,
+div.buttons > div:hover h1, 
+div.buttons > div:hover p {
+    color: white;
+}
+
+
+
+/* Footer: About Us & Contact */
+div.aboutUs {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+}
+div.aboutUs > div:first-child {
+    width: 450px;
+}
+div.contact {
+    width: 300px;
+}
+div.contact p {
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+div.contact i {
+    font-size: 32px;
+    color: #aeb6be;
+    text-align: center;
+    width: 32px;
+    margin: 0 10px;
+    display: inline-block;
+}
+div.aboutUs h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222931;
+    margin-bottom: 30px;
+}
+div.aboutUs p {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f656d;
+    line-height: 20px;
+}
+
+
+
+/* Footer: Copyright */
+div.copyright {
+    background-color: #222931;
+    height: 50px;
+    margin-top: 30px;
+}
+div.copyright div {
+    width: 950px;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+div.copyright p {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: right;
+    line-height: 18px;
+}
