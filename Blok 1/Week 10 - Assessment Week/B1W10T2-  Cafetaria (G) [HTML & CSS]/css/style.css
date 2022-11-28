@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: grey;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul.menu {
+    grid-column: 1/6;
+    grid-row: 2;
+    background-color: #91C73E;
+    overflow: hidden;
+}
+ul.menu li {
+    display: inline;
+}
+ul.menu li a {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px; 
+    margin-left: 72px;
+
+    background-color: #511c74;
+    color: #91C73E;
+    font-size: 20px;
+    line-height: 50px;
+}
+ul.menu li a:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 5px 0px;
+    background-color: white;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    /* Centering */
+    width: 1000px;
+    margin: 0px auto;
+}
+.grid-snacks {
+    grid-template-rows: 150px 50px 50px 200px 200px 200px 20px;
+}
+.grid-friet {
+    grid-template-rows: 150px 50px 50px 200px 200px 200px 200px 20px;
+}
+.grid-lunch {
+    grid-template-rows: 150px 50px 50px 40px 100px 20px;
+    grid-gap: 0px;
+}
+
+.smulhoek {
+    grid-column: 1/6;
+    grid-row: 1;
+    height: 110px;
+    padding: 20px;
+    width: 400px;
+    margin: 0px auto;
+}
+.bamischijf {
+    grid-column: 1;
+    grid-row: 4;
+}
+.bitterbal {
+    grid-column: 2;
+    grid-row: 4;
+}
+.berenklauw {
+    grid-column: 3;
+    grid-row: 4;
+}
+.frikandelspeciaal {
+    grid-column: 4;
+    grid-row: 4;
+}
+.gehaktbal {
+    grid-column: 5;
+    grid-row: 4;
+}
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 10px 20px
+}
+.title {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+}
+.leftText {
+    grid-column: 1/3;
+    grid-row: 5;
+}
+.logo {
+    grid-column: 3;
+    grid-row: 5;
+}
+.rightText {
+    grid-column: 4/6;
+    grid-row: 5;
+}
+.kaassouffle {
+    grid-column: 1;
+    grid-row: 6;
+}
+.kipcorn {
+    grid-column: 2;
+    grid-row: 6;
+}
+.kipnuggets {
+    grid-column: 3;
+    grid-row: 6;
+}
+.kroket {
+    grid-column: 4;
+    grid-row: 6;
+}
+.mexicano {
+    grid-column: 5;
+    grid-row: 6;
+}
+
+.friet-zonder {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.friet-satesaus {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.friet-ketchup {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+.friet-speciaal {
+    grid-column: 4/5;
+    grid-row: 6/7;
+}
+.prices {
+    padding-top: 100px;
+    grid-column: 3;
+    grid-row: 5/6;
+}
+.prices-items {
+    padding: 10px
+}
+
+.broodjes {
+    background-color: #91C73E;
+    grid-column: 1/3;
+    grid-row: 4;
+}
+.broodjes-hamburger {
+    background-color: #91C73E;
+    grid-column: 4/6;
+    grid-row: 4;
+}
+.broodjes-menu {
+    background-color: #511c74;
+    color: white;
+    grid-row: 5;
+    margin: 0px;
+    padding: 15px 0px 15px 40px;
+}
+.broodjes-items {
+    grid-column: 1;
+}
+.broodjes-prices {
+    grid-column: 2;
+}
+.broodjes-hamburger-items {
+    grid-column: 4;
+}
+.broodjes-hamburger-prices {
+    grid-column: 5;
+}
+
+.footer {
+    background-color: #91C73E;
+    grid-column: 1/6;
+    text-align: center;
+}
+.footer-snacks {
+    grid-row: 7;
+}  
+.footer-friet {
+    grid-row: 8;
+}
+.footer-lunch {
+    grid-row: 6;
+}
