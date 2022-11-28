@@ -1,4 +1,4 @@
-# B1W3L2 - Operators
+# B1W2O1 - Pizza Calculator
 ## Created by Ricardo Froeliger
 
 Create the JavaScript application "Pizza Calculator". 
