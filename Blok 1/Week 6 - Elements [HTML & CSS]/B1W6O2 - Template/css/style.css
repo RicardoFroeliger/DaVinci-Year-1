@@ -1,0 +1,155 @@
+body, html {
+    width: 100%;
+    height: 95%;
+}
+body {
+    background: url('../images/background.png') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+img#logo {
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    width: 302px;
+    height: 155px;
+}
+input.alignY {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+}
+input#home {
+    left: 25%;
+    transform: translateX(-25%);
+}
+input#features {
+    left: 35%;
+    transform: translateX(-35%);
+}
+input#pages {
+    left: 45%;
+    transform: translateX(-45%);
+}
+input#portofolio {
+    left: 55%;
+    transform: translateX(-55%);
+}
+input#blog {
+    left: 65%;
+    transform: translateX(-65%);
+}
+input#contact {
+    left: 75%;
+    transform: translateX(-75%);
+}
+
+div {
+    background-color: white;
+    overflow: hidden;
+    height: 40px;
+}
+div h2 {
+    color: black;
+    line-height: 0px;
+}
+
+i {
+    background-color: #CACACA;
+    color: white;
+    float: right;
+    border: 1px solid white;
+}
+i.blank {
+    margin-right: 40px;
+}
+i#google {
+    padding: 13px 10px;
+}
+i#fb {
+    padding: 12px 15px;
+}
+i#twitter {
+    padding: 13px 12px;
+}
+i#wifi {
+    padding: 12px 11px;
+}
+
+h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    font-size: 40px;
+}
+p, h2{
+    margin: 20px;
+}
+img {
+    width: 300px;
+    height: 300px;
+    position: absolute; 
+}
+
+p#homeP {
+    position: absolute;
+    top: 80%;
+    width: 40%;
+    transform: translateY(-80%);
+}
+img#homeImg {
+    top: 70%;
+    left: 85%;
+    transform: translate(-70%,-85%);
+}
+p#featP {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-30%,-70%);
+    line-height: 25px;
+} 
+img#featImg {
+    top: 80%;
+    left: 85%;
+    transform: translate(-85%,-80%);
+}
+ul#featUl li {
+    margin-bottom: 15px;
+}
+h2#pagesH2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+body#portfolioBody {
+    background: url('../images/portfolio.png') no-repeat;
+    background-size: cover;
+    background-position: 50%
+}
+p#blogP {
+    position: absolute;
+    top: 80%;
+    width: 40%;
+    transform: translateY(-80%);
+}
+h2#blogH2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+}
+img#blogImg {
+    top: 70%;
+    left: 85%;
+    transform: translate(-70%,-85%);
+}
+p#contactP {
+    margin-top: 25%;
+}

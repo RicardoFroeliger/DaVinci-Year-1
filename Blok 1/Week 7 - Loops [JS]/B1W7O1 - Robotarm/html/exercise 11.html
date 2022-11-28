@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1W7O1 - Robotarm ~ 11</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById('canvas');
+            var robotArm = new RobotArm(canvas);
+            
+            robotArm.loadLevel('exercise 11');
+            robotArm.speed = 1500;
+
+
+
+            /* Places white blockes to the right. */
+            for(i = 1; i <= 8; i++) robotArm.moveRight();
+            for(i = 1; i <= 8; i++) { /* checks only 8 blocks */
+                robotArm.grab();
+                if(robotArm.scan() === "white") {
+                    robotArm.moveRight();
+                    robotArm.drop();
+                    robotArm.moveLeft();
+                } else robotArm.drop(); 
+                robotArm.moveLeft();   
+            };
+            
+            /* Makes room for white blocks to be placed right. */
+            // for(i=0;i<9; i++) { 
+            //     robotArm.moveRight(); /* checks all 9 blocks */
+            //     robotArm.grab();
+            //     robotArm.moveLeft();
+            //     robotArm.drop();
+            //     robotArm.moveRight();
+            // };
+
+            /* Places white blocks to the right. */
+            // for(i = 1; i <= 9; i++) {
+            //     robotArm.moveLeft();
+            //     robotArm.grab();
+            //     if(robotArm.scan() === "white") {
+            //         robotArm.moveRight();
+            //         robotArm.drop();
+            //         robotArm.moveLeft();
+            //     } else robotArm.drop();
+            // };
+
+
+
+            robotArm.run();
+        </script>
+    </body>
+</html>

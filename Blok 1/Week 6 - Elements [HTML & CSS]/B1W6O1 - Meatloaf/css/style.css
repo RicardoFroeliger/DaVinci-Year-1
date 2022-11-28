@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+}
+
+h1, h2, li, p {
+    font-family: 'Roboto', sans-serif;
+}
+div {
+    margin: 0px auto;
+    width: 50%;
+}
+
+div h1 {
+    font-size: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid black;
+    padding-bottom: 16px;
+}
+div h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-top: 40px;
+}
+div p {
+    font-size: 24px;
+    line-height: 32px;
+}
+div li {
+    font-size: 20px;
+    line-height: 26px;
+}
+div ul li {
+    margin-bottom: 10px;
+}
+div ol li {
+    margin-bottom: 20px;
+}
+div p.tip {
+    background-color: #DEF6ED;
+    border-radius: 4px;
+    padding: 25px;
+}
+div img#tomatensoep { height: 540px; }
+div img#tiramisu { height: 430px}
+
+/* Navigator */
+nav {
+    background-color: #333333;
+    overflow: hidden;
+}
+nav a, nav p {
+    float: left;
+    padding: 16px;
+    margin: 0;
+
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+}
+nav p { float: right; }
+nav a:hover {
+    background-color: #666666;
+}
+nav a.active {
+    background-color: #ff8c1a;
+}

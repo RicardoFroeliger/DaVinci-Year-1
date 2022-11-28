@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1W7O1 - Robotarm ~ 10</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById('canvas');
+            var robotArm = new RobotArm(canvas);
+            
+            robotArm.loadLevel('exercise 10');
+            robotArm.speed = 1500;
+
+
+
+            for(i = 1; i <= 4; i++) { 
+                robotArm.grab();
+                for(j = 1; j <= 6 - i; j++) robotArm.moveRight();
+                robotArm.drop();
+                for(j = 1; j <= 5 - i; j++) robotArm.moveLeft();
+            };            
+            robotArm.grab();
+            for(i = 1; i <= 6; i++) robotArm.moveLeft();
+            robotArm.drop();
+            for(i = 1; i <= 5; i++) robotArm.moveRight();
+            for(i = 1; i <= 4; i++) {
+                robotArm.grab();
+                for(j = 1; j <= 5 - i; j++) robotArm.moveLeft();
+                robotArm.drop();
+                for(j = 1; j <= 5 - i; j++) robotArm.moveRight();
+            };
+            for(i = 1; i <= 5; i++) robotArm.moveLeft(); // Reset hook position
+
+
+
+            robotArm.run();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1W7O1 - Robotarm ~ 13</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById('canvas');
+            var robotArm = new RobotArm(canvas);
+            
+            robotArm.randomLevel(1, 8);
+            robotArm.speed = 1500;
+
+            
+
+            let Stop = false;
+            for(i = 1; i <= 6; i++) {
+                if(Stop === false) {
+                    robotArm.grab();
+                    if(robotArm.scan() !== null) {
+                        for(j = 1; j <= i; j++) robotArm.moveRight();
+                        robotArm.drop();
+                        for(j = 1; j <= i; j++) robotArm.moveLeft();    
+                    } else Stop = true;  
+                };
+            };
+
+
+
+            robotArm.run();
+        </script>
+    </body>
+</html>

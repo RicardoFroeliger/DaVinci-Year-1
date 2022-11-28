@@ -1,0 +1,14 @@
+.box {
+    height: 160px;
+    width: 340px;
+    padding: 40px;
+    margin: 40px;
+    border: 20px dashed firebrick;
+    
+    background-color: #EEE9D6;
+    outline: 1px solid black;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 65px;
+}
