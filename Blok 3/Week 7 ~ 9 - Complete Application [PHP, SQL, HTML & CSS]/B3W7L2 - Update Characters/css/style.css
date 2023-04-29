@@ -1,0 +1,108 @@
+html, body{
+    background-color: gray;
+    font-family: Verdana;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color:limegreen;
+}
+
+a:active {
+    color: red;
+}
+
+#container, footer, header {
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.item{
+    border-bottom: 1px solid silver;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: 46%;
+}
+
+.item:hover{
+    background-color: gainsboro;
+}
+
+.item .left{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item .left .avatar {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 150px;
+}
+
+.item .right{
+    display: inline-block;
+}
+
+.item .right h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.item:hover .right ul{
+    color: black;
+}
+
+.detail {
+    position: relative;
+}
+header .backbutton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.detail .left, .detail .right {
+    display: inline-block;
+}
+.detail .left{
+    width: 300px;
+    margin-right: 20px;
+    float: left;
+}
+
+.detail .right{
+    width: 630px;
+}
+
+.detail .stats{
+    border: 2px solid black;
+}
+
+.detail .stats .gear{
+    list-style: none;
+    padding: 0;
+    padding-left: 20px;
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+}
