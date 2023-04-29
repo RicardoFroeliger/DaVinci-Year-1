@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>B3W6O1 - Bootstrap Puzzles</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container pt-5">
+            <div class="fixed-top text-center bg-light border-bottom">
+                <div class="text-center">
+                    <h1>Bootstrap Puzzles</h1>
+                </div>
+                <div class="mb-2">
+                    <a href="#exercise" class="btn btn-info">Exercise</a>
+                    <a href="#puzzle1" class="btn btn-info">Puzzle 1</a>
+                    <a href="#puzzle2" class="btn btn-info">Puzzle 2</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="w-100 card m-3" id="exercise">
+                    <div class="card-header">
+                        <h2 class="d-inline">Exercise</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            You're going to make 3 pages with the use of <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, by only adding classes to existing elements.<br>All 3 pages have the same HTML but a different layout.<br>
+                            The same technical requirements apply to each puzzle.<br>
+                            The second puzzle also has some functional requirements.
+                        </p>
+                        <h3>Technical Requirements</h3>
+                        <ul class="list-unstyled pl-3">
+                            <li><i class="fas fa-exclamation text-danger"></i> You may <b>NOT</b> edit the HTML code (except when adding classes)</li>
+                            <li><i class="fas fa-exclamation text-danger"></i> You may <b>NOT</b> add your own CSS or style (through a CCS file or inline style)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-100 card m-3" id="puzzle1">
+                    <div class="card-header">
+                        <h2 class="d-inline">Puzzle 1</h2>
+                        <span class="ml-2 align-top badge badge-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <a href="img/puzzle1_img1.png" target="_blank" class="col-3"><img class="img-fluid" src="img/puzzle1_img1.png"></a>
+                        </div>
+                        <a href="puzzle1.html" class="btn btn-info mt-2">Go to Puzzle 1</a>
+                    </div>
+                </div>
+
+                <div class="w-100 card m-3" id="puzzle2">
+                    <div class="card-header">
+                        <h2 class="d-inline">Puzzle 2</h2>
+                        <span class="ml-2 align-top badge badge-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <p><i class="fas fa-exclamation text-danger"></i> In this exercise you're allowed to add data attributes to the elements.</p>
+                        <h3>Functional Requirements</h3>
+                        <ul class="list-unstyled pl-3">
+                            <li><i class="fas fa-exclamation text-success"></i> The menu expands when you click on it.</li>
+                            <li><i class="fas fa-exclamation text-success"></i> For the menu icon you can make use of <a href="https://fontawesome.com/icons/bars?style=solid">Font Awesome</a>.</li>
+                            <li><i class="fas fa-exclamation text-success"></i> The images of the trees are shown as a carousel.</li>
+                            <li><i class="fas fa-exclamation text-success"></i> The card text is only visible after clicking "Read more &hellip;"</li>
+                        </ul>
+
+                        <div class="row">
+                            <a href="img/puzzle2_img1.png" target="_blank" class="col-3"><img class="img-fluid" src="img/puzzle2_img1.png"></a>
+                            <a href="img/puzzle2_img2.png" target="_blank" class="col-3"><img class="img-fluid" src="img/puzzle2_img2.png"></a>
+                        </div>
+
+                        <a href="puzzle2.html" class="btn btn-info mt-2">Go to Puzzle 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-3">
+                <div class="col text-center">
+                    <span>Created with: </span>
+                    <a href="https://getbootstrap.com/" target="_blank"><img src="img/logo-bootstrap.png"></a>
+                    <a href="https://fontawesome.com/" target="_blank"><img src="img/logo-fontawsome.png"></a>
+                    <a href="https://w3schools.com/" target="_blank"><img src="img/logo-w3schools.png"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
