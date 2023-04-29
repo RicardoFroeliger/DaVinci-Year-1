@@ -1,3 +1,12 @@
+<?php 
+    define('HELLOWORLD', 'Hello World!');
+    $learningPhp = 'Learning PHP..';
+    $learningPhp = HELLOWORLD;
+    $hello = 'Hello ';
+    $world = 'World!';
+    $helloWorld = ['Hello', 'World!'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,15 +23,6 @@
         </style>
     </head>
     <body>
-        <?php 
-            define('HELLOWORLD', 'Hello World!');
-            $learningPhp = 'Learning PHP..';
-            $learningPhp = HELLOWORLD;
-            $hello = 'Hello ';
-            $world = 'World!';
-            $helloWorld = ['Hello', 'World!'];
-        ?>
-
         <h1><?php echo 'Hello World!';?></h1>
         <h1><?php echo HELLOWORLD;?></h1>
         <h1><?php echo $learningPhp;?></h1>

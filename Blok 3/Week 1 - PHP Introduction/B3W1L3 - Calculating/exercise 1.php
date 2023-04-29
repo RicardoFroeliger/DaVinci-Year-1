@@ -1,3 +1,8 @@
+<?php 
+    $num1 = rand(1, 100);
+    $num2 = rand(1, 100);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,12 +12,7 @@
         <title>B3W1L3 - Calculating ~ 1</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <?php 
-            $num1 = rand(1, 100);
-            $num2 = rand(1, 100);
-        ?>
-        
+    <body>        
         <h1><?php echo 'Random numbers are: '.$num1.', '.$num2;?></h1>
         <h1><?php echo $num1.' + '.$num2.' = '.($num1 + $num2);?></h1>
         <h1><?php echo $num1.' - '.$num2.' = '.($num1 - $num2);?></h1>
