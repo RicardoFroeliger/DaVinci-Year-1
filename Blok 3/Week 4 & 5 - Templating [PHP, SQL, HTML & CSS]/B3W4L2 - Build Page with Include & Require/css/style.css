@@ -1,0 +1,22 @@
+body {
+    height: 100%;
+    background: lightgrey !important;
+}
+
+.nav-link, .navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1em !important;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #000
+}
+.navbar-toggler {
+    margin-right: 1em !important;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}

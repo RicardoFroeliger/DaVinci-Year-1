@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(to right, #00ff77, #ccffcc);
+    margin: 2vh;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vmin;
+}
+
+img {
+    float: left;
+    margin-right: 2vh;
+}
+p {
+    font-size: 3vmin;
+    line-height: 4vmin;
+}
