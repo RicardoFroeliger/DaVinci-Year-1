@@ -8,7 +8,7 @@
 }
 @font-face { 
     font-family: 'ATLA Font'; 
-    src: url('./media/audio & fonts/atlaFont.ttf') format('truetype'); 
+    src: url('../media/audio & fonts/atlaFont.ttf') format('truetype'); 
 }
 
 * {
