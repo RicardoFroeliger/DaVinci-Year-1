@@ -1,5 +1,7 @@
 function editH1(content) { 
-    document.getElementById('h1').innerHTML = content;
+    setTimeout(() => {
+        document.getElementById('h1').innerHTML = content;
+    }, 10); // h1 html has to load first
 };    
 function error() {
     editH1('You have not answered yes/no or cancelled.<br>Please refresh this page to start over.'); 
